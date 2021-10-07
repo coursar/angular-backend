@@ -16,6 +16,7 @@ public class PurchaseController {
 
   @GetMapping
   public List<PurchaseDto> getAll() throws InterruptedException {
+    Thread.sleep(5000);
     return service.getAll();
   }
 
