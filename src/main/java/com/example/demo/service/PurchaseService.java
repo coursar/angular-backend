@@ -20,7 +20,10 @@ public class PurchaseService implements InitializingBean {
 
   @Override
   public void afterPropertiesSet() throws Exception {
-    items.add(new PurchaseDto(nextId++, "first", 10_000));
+    for (int i = 0; i < 5; i++) {
+      items.add(new PurchaseDto(nextId, nextId, "first", 10_000));
+      nextId++;
+    }
   }
 
   public PurchaseDto save(PurchaseDto dto) {

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class PurchaseDto {
   private long id;
+  private long ownerId;
   private String name;
   private int price;
 }
